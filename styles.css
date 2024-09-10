@@ -1,0 +1,139 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+     --primary-color: #3C3D37;
+     --secondary-color: #A6B8C6;
+     --background-color: #DEE6ED;
+     --text-color: black;
+     --intense-color: #325572;
+     --light-color: #F8FBFD;
+
+  
+    --root-font-size: 1.1rem;
+    font-size: var(--root-font-size);
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+  }
+
+main {
+    width: 80%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .container-header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    line-height: 1.2;
+    overflow: auto;
+  }
+
+  .container-input {
+    background-color: white;
+    width: 250px;
+    height: 460px;
+    margin: 0 auto;
+    border-radius: 15px;
+    border: 15px solid var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description {
+    color: var(--text-color);
+  }
+  
+
+  #user-input {
+    width: 90%;
+    height: 30px;
+    border-radius: 1px;
+    font-family: sans-serif;
+    position: relative;
+    border: none;
+    border-bottom: 2px solid var(--background-color);
+    background: var(--light-color);
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  input:focus {
+    border: none; 
+    outline: none; 
+}
+
+  #check-btn {
+    cursor: pointer;
+    color: white;
+    background-color: var(--intense-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 5px auto;
+    width: 120px;
+    height: 30px;
+  }
+
+  #clear-btn {
+    cursor: pointer;
+    color: white;
+    background-color: var(--intense-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 5px auto;
+    margin-top: 10px;
+    width: 80px;
+    height: 20px;
+  }
+
+  #check-btn:hover {
+    background-image: linear-gradient(var(--text-color), var(--intense-color));
+  }
+
+  #results-div {
+    overflow-y: auto;
+    flex-wrap: wrap;
+    min-height: 50px;
+    color: var(--text-color);
+    display: flex;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 200px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+
+@media (max-width: 600px) {
+
+.container-header {
+    max-width: 110%;
+    overflow: auto;
+  }
+}
